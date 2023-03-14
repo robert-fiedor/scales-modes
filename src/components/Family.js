@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {colors, families} from "../const";
 import Scale from "./Scale";
 
 const styleFamily = {
@@ -9,7 +8,7 @@ const styleFamily = {
 
 const styleSysNames = {
     width: '100%',
-    backgroundColor: colors.white,
+    backgroundColor: 'white',
     fontSize: '18px',
     display: 'inline-block',
     padding: '20px',

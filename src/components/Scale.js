@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {colors} from "../const";
 import Mode from "./Mode";
 import {MidiNumbers, Piano} from "react-piano";
+import PianoLine from "./pianoLine";
 
 const scaleStyle = {
     padding: '5px',
@@ -13,7 +14,6 @@ const scaleStyle = {
 const pianoStyle = {
     marginTop: '10px',
     display: 'block',
-    marginBottom: '20px',
     pointerEvents: 'none'
 }
 
@@ -75,6 +75,7 @@ function Scale({sysNamesAndChords, scaleFormula, index, note}) {
                     activeNotes={activeNofes}
 
                 />
+                <PianoLine></PianoLine>
             </div>
         </div>
     );

@@ -42,26 +42,8 @@ let family4 = {
     scaleFormula: [W, W, H, W, H, WH, H]
 }
 
-let families = [family1, family2, family3, family4, family1]
+let families = [family1, family2, family3, family4]
 
-const colors = {
-    white: '#FFFFFF',
-    black: '#000000',
-    gray: '#A9A9A9',
-    blue: '#1E90FF',
-    green: '#2ECC71',
-    red: '#E74C3C',
-    orange: '#FFA500',
-    yellow: '#FFFF00',
-    purple: '#8B008B',
-    pink: '#FF69B4',
-    teal: '#008080',
-    lavender: '#E6E6FA',
-    navy: '#000080',
-    olive: '#808000',
-    maroon: '#800000',
-    brown: '#A52A2A',
-};
 
 const notesAndMidi = [
     { key: 'C1', note: 24, velocity: 127 },
@@ -92,4 +74,4 @@ const notesAndMidi = [
 
 const scaleNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 
-export {chords, families, colors, notesAndMidi, scaleNotes}
+export {chords, families,  notesAndMidi, scaleNotes}

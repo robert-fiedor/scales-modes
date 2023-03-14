@@ -5,6 +5,7 @@ import 'react-piano/dist/styles.css';
 import 'react-piano/dist/styles.css';
 import Buttons from "./components/Buttons";
 import './App.css';
+import Progression from "./components/Progression";
 
 function App() {
 
@@ -30,9 +31,11 @@ function App() {
 
     return (
         <div>
+
             <header>
                 <Buttons className='centered-div' onNoteSelected={(note) => setNote(note)}></Buttons>
             </header>
+
             <div className="app">
                 <div className='wrapper'>
                     {data.map((item) => (
@@ -40,6 +43,8 @@ function App() {
                     ))}
                 </div>
             </div>
+
+            <Progression />
         </div>
     );
 }
