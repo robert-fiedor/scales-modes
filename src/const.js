@@ -1,6 +1,6 @@
 let W = 'W'
 let H = 'H'
-let OC = 'OC'
+let WH = 'WH'
 
 let chords = {
     Maj7: {name: 'Maj7'},
@@ -31,7 +31,7 @@ let family3 = {
     name: 'HARMONIC MINOR MODES',
     sysNames: ['Ionian #5', 'Dorian #4', 'Phrygian #3', 'Lydian #2', 'Mixolydian #1', 'Aeolian #7', 'Locrian #6'],
     chords: [chords.Maj7H5, chords.m7, chords.Seven, chords.Maj7, chords.dim7, chords.minMaj7, chords.m7b5],
-    scaleFormula: [W, H, W, W, H, OC, H]
+    scaleFormula: [W, H, W, W, H, WH, H]
 }
 
 //TODO check last chord
@@ -39,10 +39,10 @@ let family4 = {
     name: 'HARMONIC MAJOR MODES',
     sysNames: ['Ionian b6', 'Dorian b5', 'Phrygian b4', 'Lydian b3', 'Mixolydian b2', 'Aeolian b1', 'Locrian b7'],
     chords: [chords.Maj7, chords.m7b5, chords.m7, chords.minMaj7, chords.Seven, chords.Maj7H5, chords.dim7],
-    scaleFormula: [W, W, H, W, H, OC, H]
+    scaleFormula: [W, W, H, W, H, WH, H]
 }
 
-let families = [family1, family2, family3, family4]
+let families = [family1, family2, family3, family4, family1]
 
 const colors = {
     white: '#FFFFFF',

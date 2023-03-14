@@ -5,7 +5,7 @@ import Scale from "./Scale";
 function Mode({mode, index}) {
 
     const styleBold = {
-        backgroundColor: '#39FF14',
+        backgroundColor: 'yellow',
     };
 
     const styleRegular = {
@@ -13,7 +13,7 @@ function Mode({mode, index}) {
     }
 
     return (
-        <span>
+        <div className='mode'>
             {mode.map((interval, intervalIndex) => {
                     let doBold = false;
                     if (intervalIndex < index + 7 && intervalIndex >=index) {
@@ -23,7 +23,7 @@ function Mode({mode, index}) {
                     return (<span key={intervalIndex} style={doBold ? styleBold : styleRegular}>{interval} </span>)
                 }
             )}
-        </span>)
+        </div>)
 }
 
 export default Mode;

@@ -3,10 +3,9 @@ import {colors, families} from "../const";
 import Scale from "./Scale";
 
 const styleFamily = {
-    backgroundColor: 'white',
     padding: '5px',
-    display: 'inline-block',
-    width: '30%'
+    width: '450px',
+    marginRight: '15px',
 };
 
 const styleSysNames = {
@@ -31,8 +30,6 @@ function Family({family, note}) {
             </div>
 
             <div style={styleSysNames}>
-
-                *{note}*
 
                 {family.sysNamesAndChords.map((sysNamesAndChords, index) => (
                     <Scale key={index}

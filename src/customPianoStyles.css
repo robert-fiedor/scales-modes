@@ -3,7 +3,7 @@
 }
 
 .ReactPiano__Key--active.ReactPiano__Key--accidental {
-    background: darkgreen;  /* Change the default active accidental key color to black */
+    background: limegreen;  /* Change the default active accidental key color to black */
 }
 
 .ReactPiano__Key--accidental {

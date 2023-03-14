@@ -23,48 +23,39 @@ function Scale({sysNamesAndChords, scaleFormula, index, note}) {
     scaleFormula = scaleFormula.concat(scaleFormula);
 
     const firstNote = MidiNumbers.fromNote('c1');
-    const lastNote = MidiNumbers.fromNote('b2');
+    const lastNote = MidiNumbers.fromNote('b3');
 
     const [activeNofes, setActiveNofes] = useState([24]);
     useEffect(() => {
-        console.log(1323)
-
-
         let activeNotes = scaleFormula.reduce((acc, curr) => {
-
             if (curr === "H") {
                 acc = [...acc, acc[acc.length - 1] + 1]
             } else if (curr === "W") {
                 acc = [...acc, acc[acc.length - 1] + 2]
-            } else if (curr === "OC") {
+            } else if (curr === "WH") {
                 acc = [...acc, acc[acc.length - 1] + 3]
             }
-
             return acc
+        }, [MidiNumbers.fromNote(note+'1')])
 
-        }, [24])
+        function trimNotes(activeNotes, index) {
+            let first = activeNotes.slice(index)
+            return first.slice(0, 7);
 
-        // function doMe(activeNotes, index) {
-        //     let first = activeNotes.slice(index)
-        //     return first.slice(0, 7);
-        //
-        // }
+        }
 
-        setActiveNofes(activeNotes)
-
+        setActiveNofes(trimNotes(activeNotes,index))
 
 
-
-    }, [setActiveNofes, note]);
-
+    }, [setActiveNofes, note, index]);
 
 
     return (
         <div key={sysNamesAndChords} style={scaleStyle}>
 
             <div>
-                <span>{sysNamesAndChords.sysName}</span>
-                <span>_______________</span>
+                <span>{note} {sysNamesAndChords.sysName}</span>
+                <span> - </span>
                 <span>{sysNamesAndChords.chord.name}</span>
             </div>
 
@@ -79,7 +70,7 @@ function Scale({sysNamesAndChords, scaleFormula, index, note}) {
                     stopNote={(midiNumber) => {
                         // Stop playing a given note - see notes below
                     }}
-                    width={280}
+                    width={450}
 
                     // activeNotes={doMe(activeNotes, index)}
                     activeNotes={activeNofes}

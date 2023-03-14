@@ -5,6 +5,7 @@ import 'react-piano/dist/styles.css';
 import 'react-piano/dist/styles.css';
 import './customPianoStyles.css';
 import Buttons from "./components/Buttons";
+import './App.css';
 
 function App() {
 
@@ -30,12 +31,16 @@ function App() {
 
     return (
         <div>
-            <Buttons onNoteSelected={(note) => setNote(note)}
-            ></Buttons>
-
-            {data.map((item) => (
-                <Family note={note} key={item.name} family={item}/>
-            ))}
+            <header>
+                <Buttons className='centered-div' onNoteSelected={(note) => setNote(note)}></Buttons>
+            </header>
+            <div className="app">
+                <div className='wrapper'>
+                    {data.map((item) => (
+                        <Family className='box' note={note} key={item.name} family={item}/>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

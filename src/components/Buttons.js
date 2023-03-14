@@ -8,7 +8,7 @@ function Buttons({onNoteSelected}) {
     ));
 
     return (
-        <div>{scaleButtons}</div>
+        <div className='buttons'>{scaleButtons}</div>
     );
 }
 
