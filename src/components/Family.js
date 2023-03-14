@@ -21,7 +21,7 @@ const nameStyle = {
     padding: '10px'
 }
 
-function Family({family}) {
+function Family({family, note}) {
 
     return (
         <div key={family.name} style={styleFamily}>
@@ -31,9 +31,13 @@ function Family({family}) {
             </div>
 
             <div style={styleSysNames}>
+
+                *{note}*
+
                 {family.sysNamesAndChords.map((sysNamesAndChords, index) => (
                     <Scale key={index}
                            index={index}
+                           note={note}
                            sysNamesAndChords={sysNamesAndChords}
                            scaleFormula={family.scaleFormula}>
                     </Scale>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {colors} from "../const";
 import Mode from "./Mode";
 import {MidiNumbers, Piano} from "react-piano";
@@ -18,35 +18,46 @@ const pianoStyle = {
     pointerEvents: 'none'
 }
 
-function Scale({sysNamesAndChords, scaleFormula, index}) {
+function Scale({sysNamesAndChords, scaleFormula, index, note}) {
 
     scaleFormula = scaleFormula.concat(scaleFormula);
 
     const firstNote = MidiNumbers.fromNote('c1');
     const lastNote = MidiNumbers.fromNote('b2');
 
-    let activeNotes = scaleFormula.reduce((acc, curr) => {
+    const [activeNofes, setActiveNofes] = useState([24]);
+    useEffect(() => {
+        console.log(1323)
 
-        if (curr === "H") {
-            acc = [...acc, acc[acc.length - 1] + 1]
-        } else if (curr === "W") {
-            acc = [...acc, acc[acc.length - 1] + 2]
-        } else if (curr === "OC") {
-            acc = [...acc, acc[acc.length - 1] + 3]
-        }
 
-        return acc
+        let activeNotes = scaleFormula.reduce((acc, curr) => {
 
-    }, [24])
+            if (curr === "H") {
+                acc = [...acc, acc[acc.length - 1] + 1]
+            } else if (curr === "W") {
+                acc = [...acc, acc[acc.length - 1] + 2]
+            } else if (curr === "OC") {
+                acc = [...acc, acc[acc.length - 1] + 3]
+            }
 
-    function doMe(activeNotes, index) {
-        let first = activeNotes.slice(index)
+            return acc
 
-        return first.slice(0, 7);
+        }, [24])
 
-    }
+        // function doMe(activeNotes, index) {
+        //     let first = activeNotes.slice(index)
+        //     return first.slice(0, 7);
+        //
+        // }
 
-    console.log('rob: ', activeNotes)
+        setActiveNofes(activeNotes)
+
+
+
+
+    }, [setActiveNofes, note]);
+
+
 
     return (
         <div key={sysNamesAndChords} style={scaleStyle}>
@@ -70,7 +81,8 @@ function Scale({sysNamesAndChords, scaleFormula, index}) {
                     }}
                     width={280}
 
-                    activeNotes={doMe(activeNotes, index)}
+                    // activeNotes={doMe(activeNotes, index)}
+                    activeNotes={activeNofes}
 
                 />
             </div>

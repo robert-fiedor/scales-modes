@@ -26,13 +26,15 @@ function App() {
     })
 
     const [data] = useState(familiesConverted);
+    const [note, setNote] = useState('C');
 
     return (
         <div>
-            <Buttons></Buttons>
+            <Buttons onNoteSelected={(note) => setNote(note)}
+            ></Buttons>
 
             {data.map((item) => (
-                <Family key={item.name} family={item}/>
+                <Family note={note} key={item.name} family={item}/>
             ))}
         </div>
     );
