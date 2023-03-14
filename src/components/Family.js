@@ -3,8 +3,7 @@ import {colors, families} from "../const";
 import Scale from "./Scale";
 
 const styleFamily = {
-    padding: '5px',
-    width: '450px',
+    padding: '0px',
     marginRight: '15px',
 };
 
@@ -13,6 +12,7 @@ const styleSysNames = {
     backgroundColor: colors.white,
     fontSize: '18px',
     display: 'inline-block',
+    padding: '20px',
 };
 
 const nameStyle = {

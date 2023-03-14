@@ -4,8 +4,8 @@ import Mode from "./Mode";
 import {MidiNumbers, Piano} from "react-piano";
 
 const scaleStyle = {
-    backgroundColor: 'white',
     padding: '5px',
+    marginBottom: '20px',
     display: 'block',
 
 }
@@ -13,7 +13,6 @@ const scaleStyle = {
 const pianoStyle = {
     marginTop: '10px',
     display: 'block',
-
     marginBottom: '20px',
     pointerEvents: 'none'
 }

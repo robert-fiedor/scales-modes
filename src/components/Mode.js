@@ -5,7 +5,7 @@ import Scale from "./Scale";
 function Mode({mode, index}) {
 
     const styleBold = {
-        backgroundColor: 'yellow',
+        backgroundColor: '#bcdbdf',
     };
 
     const styleRegular = {

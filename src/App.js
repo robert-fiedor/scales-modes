@@ -3,7 +3,6 @@ import {families, notesAndMidi} from "./const";
 import Family from "./components/Family";
 import 'react-piano/dist/styles.css';
 import 'react-piano/dist/styles.css';
-import './customPianoStyles.css';
 import Buttons from "./components/Buttons";
 import './App.css';
 

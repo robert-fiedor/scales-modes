@@ -1,9 +1,27 @@
 
+.first-color {
+    background: #f7aa00;
+}
+
+.second-color {
+    background: #235784;
+}
+
+.third-color {
+    background: #40a8c4;
+}
+
+.fourth-color {
+    background: #bcdbdf;
+}
+
+
 body {
     margin: 0px;
-    font-family: monospace;
+    font-family: "Fira Code", monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #bcdbdf;
 }
 
 .app {
@@ -52,6 +70,29 @@ header {
     background-color: #f1f1f1;
     padding: 20px;
     border: 1px solid #ccc;
+}
+
+
+.ReactPiano__Key--active {
+    background: #f7aa00;  /* Change the default active key color to bright red */
+}
+
+.ReactPiano__Key--active.ReactPiano__Key--accidental {
+    background: #235784;  /* Change the default active accidental key color to black */
+}
+
+.ReactPiano__Key--accidental {
+    background: #bcdbdf;  /* Change accidental keys to be completely black */
+}
+
+.ReactPiano__Key--accidental{
+    background: grey;  /* Change accidental keys to be completely black */
+}
+
+
+
+button:hover {
+    cursor: pointer;
 }
 
 
