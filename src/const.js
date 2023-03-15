@@ -44,7 +44,23 @@ let family4 = {
     scaleFormula: [W, W, H, W, H, WH, H]
 }
 
-let families = [family1, family2, family3, family4]
+let families = [family1, family2, family3, family4].map((item) => {
+
+    function combineArrays(array1, array2) {
+        const combinedArray = [];
+        const maxLength = Math.max(array1.length, array2.length);
+        for (let i = 0; i < maxLength; i++) {
+            combinedArray.push({sysName: array1[i], chord: array2[i]});
+        }
+        return combinedArray;
+    }
+
+    return {
+        name: item.name,
+        scaleFormula: item.scaleFormula,
+        sysNamesAndChords: combineArrays(item.sysNames, item.chords)
+    }
+})
 
 
 const notesAndMidi = [

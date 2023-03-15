@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {colors} from "../const";
 import Mode from "./Mode";
 import {MidiNumbers, Piano} from "react-piano";
 import PianoLine from "./pianoLine";
@@ -8,7 +7,6 @@ const scaleStyle = {
     padding: '5px',
     marginBottom: '20px',
     display: 'block',
-
 }
 
 const pianoStyle = {
@@ -24,7 +22,9 @@ function Scale({sysNamesAndChords, scaleFormula, index, note}) {
     const firstNote = MidiNumbers.fromNote('c1');
     const lastNote = MidiNumbers.fromNote('b3');
 
-    const [activeNofes, setActiveNofes] = useState([24]);
+
+
+    const [activeNotes, setActiveNotes] = useState([24]);
     useEffect(() => {
         let activeNotes = scaleFormula.reduce((acc, curr) => {
             if (curr === "H") {
@@ -39,14 +39,12 @@ function Scale({sysNamesAndChords, scaleFormula, index, note}) {
 
         function trimNotes(activeNotes, index) {
             let first = activeNotes.slice(index)
-            return first.slice(0, 7);
+            return first.slice(0, 8);
 
         }
+        setActiveNotes(trimNotes(activeNotes,index))
 
-        setActiveNofes(trimNotes(activeNotes,index))
-
-
-    }, [setActiveNofes, note, index]);
+    }, [setActiveNotes, note, index]);
 
 
     return (
@@ -71,8 +69,7 @@ function Scale({sysNamesAndChords, scaleFormula, index, note}) {
                     }}
                     width={450}
 
-                    // activeNotes={doMe(activeNotes, index)}
-                    activeNotes={activeNofes}
+                    activeNotes={activeNotes}
 
                 />
                 <PianoLine></PianoLine>

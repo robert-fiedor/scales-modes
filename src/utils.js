@@ -41,5 +41,8 @@ let generateProgression = (root, degrees, scaleType) => {
     return result;
 }
 
+let fromActualChordToTypeOfChord = (chord) => chord.indexOf('#' !== -1) ? chord.split('#')[1] : chord.slice(1)
+
+
 export {generateProgression}
 

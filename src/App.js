@@ -9,24 +9,7 @@ import Progression from "./components/Progression";
 
 function App() {
 
-    function combineArrays(array1, array2) {
-        const combinedArray = [];
-        const maxLength = Math.max(array1.length, array2.length);
-        for (let i = 0; i < maxLength; i++) {
-            combinedArray.push({sysName: array1[i], chord: array2[i]});
-        }
-        return combinedArray;
-    }
-
-    let familiesConverted = families.map((item) => {
-        return {
-            name: item.name,
-            scaleFormula: item.scaleFormula,
-            sysNamesAndChords: combineArrays(item.sysNames, item.chords)
-        }
-    })
-
-    const [data] = useState(familiesConverted);
+    const [data] = useState(families);
     const [note, setNote] = useState('C');
 
     return (
@@ -36,7 +19,7 @@ function App() {
                 <Buttons className='centered-div' onNoteSelected={(note) => setNote(note)}></Buttons>
             </header>
 
-            <Progression />
+            {/*<Progression note={note} families={data}/>*/}
 
             <div className="app">
                 <div className='wrapper'>
