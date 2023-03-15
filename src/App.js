@@ -36,6 +36,8 @@ function App() {
                 <Buttons className='centered-div' onNoteSelected={(note) => setNote(note)}></Buttons>
             </header>
 
+            <Progression />
+
             <div className="app">
                 <div className='wrapper'>
                     {data.map((item) => (
@@ -44,7 +46,7 @@ function App() {
                 </div>
             </div>
 
-            <Progression />
+
         </div>
     );
 }

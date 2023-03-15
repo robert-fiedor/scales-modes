@@ -5,7 +5,7 @@
 // let Maj7 = {name: 'Maj7'}
 // let m7 = {name: 'm7'}
 //
-// let Seven = {name: '7'}
+// let Dominant = {name: '7'}
 // let m7b5 = {name: 'm7b5'}
 // let minMaj7 = {name: 'minMaj7'}
 // let Maj7H5 = {name: 'Maj7#5'}
@@ -15,28 +15,28 @@
 // let family1 = {
 //     name: 'MAJOR MODES',
 //     sysNames: ['Ionian', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'],
-//     chords: [Maj7, m7, m7, Maj7, Seven, m7, m7b5],
+//     chords: [Maj7, m7, m7, Maj7, Dominant, m7, m7b5],
 //     scaleFormula: [W, W, H, W, W, W, H]
 // }
 //
 // let family2 = {
 //     name: 'MELODIC MINOR MODES',
 //     sysNames: ['Ionian #1', 'Dorian #7', 'Phrygian #6', 'Lydian #5', 'Mixolydian #4', 'Aeolian #3', 'Locrian #2'],
-//     chords: [m7b5, minMaj7, m7, Maj7H5, Seven, Seven, m7b5],
+//     chords: [m7b5, minMaj7, m7, Maj7H5, Dominant, Dominant, m7b5],
 //     scaleFormula: [W, H, W, W, W, W, H]
 // }
 //
 // let family3 = {
 //     name: 'HARMONIC MINOR MODES',
 //     sysNames: ['Ionian #5', 'Dorian #4', 'Phrygian #3', 'Lydian #2', 'Mixolydian #1', 'Aeolian #7', 'Locrian #6'],
-//     chords: [Maj7H5, m7, Seven, Maj7, dim7, minMaj7, m7b5],
+//     chords: [Maj7H5, m7, Dominant, Maj7, dim7, minMaj7, m7b5],
 //     scaleFormula: [W, H, W, W, H, WH, H]
 // }
 //
 // let family4 = {
 //     name: 'HARMONIC MAJOR MODES',
 //     sysNames: ['Ionian b6', 'Dorian b5', 'Phrygian b4', 'Lydian b3', 'Mixolydian b2', 'Aeolian b1', 'Locrian b7'],
-//     chords: [Maj7, m7b5, m7, minMaj7, Seven, Maj7H5, dim7, dim7],
+//     chords: [Maj7, m7b5, m7, minMaj7, Dominant, Maj7H5, dim7, dim7],
 //     scaleFormula: [W, W, H, W, H, WH, H]
 // }
 //
