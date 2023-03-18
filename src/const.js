@@ -11,7 +11,8 @@ let chords = {
     m7b5: {name: 'm7b5'},
     minMaj7: {name: 'minMaj7'},
     Maj7H5: {name: 'Maj7#5'},
-    dim7: {name: 'dim7'}
+    dim7: {name: 'dim7'},
+    unknown : {name : 'xxx'}
 }
 
 let family1 = {
@@ -23,10 +24,10 @@ let family1 = {
 }
 
 let family2 = {
-    name: 'MELODIC MINOR MODES',
-    sysNames: ['Ionian #1', 'Dorian #7', 'Phrygian #6', 'Lydian #5', 'Mixolydian #4', 'Aeolian #3', 'Locrian #2'],
-    chords: [chords.m7b5, chords.minMaj7, chords.m7, chords.Maj7H5, chords.Dominant, chords.Dominant, chords.m7b5],
-    scaleFormula: [W, H, W, W, W, W, H]
+    name: 'NATURAL MINOR MODES',
+    sysNames: ['Ionian', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'],
+    chords: [chords.unknown, chords.unknown, chords.unknown, chords.unknown, chords.unknown, chords.unknown, chords.unknown],
+    scaleFormula: [W, H, W, W, H, W, W]
 }
 
 let family3 = {
@@ -36,8 +37,16 @@ let family3 = {
     scaleFormula: [W, H, W, W, H, WH, H]
 }
 
-//TODO check last chord
 let family4 = {
+    name: 'MELODIC MINOR MODES',
+    sysNames: ['Ionian #1', 'Dorian #7', 'Phrygian #6', 'Lydian #5', 'Mixolydian #4', 'Aeolian #3', 'Locrian #2'],
+    chords: [chords.m7b5, chords.minMaj7, chords.m7, chords.Maj7H5, chords.Dominant, chords.Dominant, chords.m7b5],
+    scaleFormula: [W, H, W, W, W, W, H]
+}
+
+
+//TODO check last chord
+let family5 = {
     name: 'HARMONIC MAJOR MODES',
     sysNames: ['Ionian b6', 'Dorian b5', 'Phrygian b4', 'Lydian b3', 'Mixolydian b2', 'Aeolian b1', 'Locrian b7'],
     chords: [chords.Maj7, chords.m7b5, chords.m7, chords.minMaj7, chords.Dominant, chords.Maj7H5, chords.dim7],
